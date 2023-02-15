@@ -3,6 +3,11 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense'
 
 function App() {
+  const getExpense = (expense) => {
+    expenses.push(expense);
+    console.log(expenses);
+  }
+
   const expenses = [
     {
       id: 'e1',
@@ -27,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAppendData={getExpense} />
       <Expenses data={expenses} />
     </div>
   );
