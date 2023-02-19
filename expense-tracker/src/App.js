@@ -5,7 +5,6 @@ import NewExpense from './components/NewExpense/NewExpense'
 function App() {
   const getExpense = (expense) => {
     expenses.push(expense);
-    console.log(expenses);
   }
 
   const expenses = [
