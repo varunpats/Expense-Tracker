@@ -14,13 +14,12 @@ function Expenses(props) {
 
     const getExpenseData = selectedYear => {
         setYear(selectedYear);
-        filteredExpenses();
     }
 
     return <Card className="expenses">
         <ExpensesFilter onSelectYear={getExpenseData} />
         <ExpenseChart expenses={filteredExpenses} />
-        <ExpenseList items={filteredExpenses}/>
+        <ExpenseList items={filteredExpenses} />
     </Card>
 }
 

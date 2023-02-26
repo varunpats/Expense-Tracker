@@ -3,7 +3,8 @@ import './Chart.css'
 
 const Chart = props => {
     const filteredArray = props.datapoints.map(datapoint => datapoint.value);
-    const maxExpense = Math.max(filteredArray);
+    const maxExpense = Math.max.apply(Math, filteredArray);
+    
     return (
         <div className='chart'>
             {props.datapoints.map(datapoint => {
